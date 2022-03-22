@@ -20,7 +20,7 @@
                     <span>Entradas</span>
                     <img src="./assets/income.svg" alt="Imagem de Entradas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomesDisplay">R$ 0,00</p>
             </div>
 
             <div class="card">
@@ -28,14 +28,14 @@
                     <span>Saídas</span>
                     <img src="./assets/expense.svg" alt="Imagem de Saídas">
                 </h3>
-                <p>R$ 2.000,00</p>
+                <p id="expensesDisplay">R$ 0,00</p>
             </div>
 
             <div class="card total">
                 <h3>
                     <span>Total</span>
                     <img src="./assets/total.svg" alt="Imagem de Total"></h3>
-                <p>R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 0,00</p>
             </div>
             
         </section>
@@ -43,7 +43,7 @@
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
         
-            <a href="#" class="button new" onclick="Modal.open()">+ Nova Transação</a>
+            <a href="#" class="button new" onclick="Modal.toggle()">+ Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -55,35 +55,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 300,00</td>
-                        <td>18/03/2022</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação website</td>
-                        <td class="income">R$ 3.000,00</td>
-                        <td>18/03/2022</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$ 200,00</td>
-                        <td>18/03/2022</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
                 </tbody>
             </table>
         </section>
 
     </main>
 
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label 
                             class="sr-only" for="description">Descrição</label>
@@ -118,7 +100,7 @@
                     </div>
 
                     <div class="input-group actions">
-                        <a href="#" class="button cancel" onclick="Modal.close()">
+                        <a href="#" class="button cancel" onclick="Modal.toggle()">
                             Cancelar
                         </a>
                         <button type="submit">Salvar</button>
@@ -128,7 +110,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
     <footer class="container">
         <p>dev.finance$</p>
