@@ -3,8 +3,8 @@
 /* Global ================= */
 :root {
     --dark-blue: #363f5f; 
-    --green: #49AA26;
-    --light-green: #3dd705;
+    --blue: #090979;
+    --light-blue: #00d4ff;
     --red: #e92929;
 }
 
@@ -51,12 +51,12 @@ h2 {
 
 /* Links & Buttons ================= */
 a {
-    color: var(--green);
+    color: var(--blue);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--light-green);
+    color: var(--light-blue);
 }
 
 button {
@@ -64,14 +64,14 @@ button {
     height: 50px;
     border: none;
     color: white;
-    background: var(--green);
+    background: var(--blue);
     padding: 0;
     border-radius: 0.25rem;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--light-green);
+    background-color: var(--light-blue);
 }
 
 .button.cancel {
@@ -98,7 +98,7 @@ button:hover {
 
 /* Header ================= */
 header {
-    background: #2d4a22;
+    background: linear-gradient(90deg, rgba(9,9,121,1) 37%, rgba(0,212,255,1) 100%);
     padding: 2rem 0 10rem;
     text-align: center;
 }
@@ -147,7 +147,7 @@ header {
 }
 
 .card.total {
-    background-color: var(--green);
+    background-color: var(--blue);
     color: #FFF;
 }
 
@@ -199,7 +199,7 @@ td.description {
 }
 
 td.income {
-    color: #12a454;
+    color: #090979;
 }
 
 td.expense {
